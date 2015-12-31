@@ -15,8 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        
+       let userDefaults = NSUserDefaults.standardUserDefaults()
+        let isFristLoad = userDefaults.boolForKey("is_frist_load")
+
+        if(!isFristLoad){
+            userDefaults.setFloat(0.10, forKey: "lowest")
+            userDefaults.setFloat(0.15, forKey: "low")
+            userDefaults.setFloat(0.20, forKey: "mid")
+            userDefaults.setFloat(0.25, forKey: "high")
+            userDefaults.setFloat(0.30, forKey: "highest")
+            userDefaults.setFloat(1.00, forKey: "num_people")
+            userDefaults.setBool(true, forKey: "is_frist_load")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        
+            return true
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
