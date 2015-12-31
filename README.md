@@ -1,6 +1,6 @@
 # Pre-work - *Tip Calculator*
 
-**Tiptobot** is a tip calculator application for iOS.
+**Tip Calculator** is a tip calculator application for iOS.
 
 Submitted by: **Wafi Mohamed**
 
